@@ -7,7 +7,9 @@ import static org.lwjgl.glfw.GLFW.glfwInit;
 public class Main {
 
     public static void main(String... arg) {
+
         GLFWErrorCallback.createPrint(System.out).set();
+
         if (!glfwInit()) {
             throw new RuntimeException("Init failed");
         }
