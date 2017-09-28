@@ -2,7 +2,7 @@ import org.lwjgl.glfw.GLFWErrorCallback;
 import render.SceneRenderer;
 import render.Window;
 
-import static org.lwjgl.glfw.GLFW.glfwInit;
+import static org.lwjgl.glfw.GLFW.*;
 
 public class Main {
 
@@ -18,6 +18,8 @@ public class Main {
         Window window = new Window(600, 300, "jStars v0.1");
         SceneRenderer renderer = new SceneRenderer();
         window.loop(renderer::render);
+
+        glfwTerminate();
 
     }
 }
